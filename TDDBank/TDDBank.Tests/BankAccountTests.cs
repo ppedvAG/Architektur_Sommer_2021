@@ -20,6 +20,7 @@ namespace TDDBank.Tests
 
             ba.Deposit(5m);
 
+            Console.WriteLine();
             Assert.That(ba.Balance, Is.EqualTo(5m));
 
             ba.Deposit(7m);

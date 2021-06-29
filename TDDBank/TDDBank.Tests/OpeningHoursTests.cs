@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Microsoft.QualityTools.Testing.Fakes;
+using NUnit.Framework;
 using System;
 
 namespace TDDBank.Tests
@@ -23,5 +24,29 @@ namespace TDDBank.Tests
             Assert.AreEqual(result, oh.IsOpen(dt));
         }
 
+
+        [Test]
+        public void IsNowOpen()
+        {
+            using (ShimsContext.Create())
+            {
+                var oh = new OpeningHours();
+
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 06, 28, 12, 0, 0);
+                Assert.IsTrue(oh.IsNowOpen());//mo
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 06, 29, 12, 0, 0);
+                Assert.IsTrue(oh.IsNowOpen());//di
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 06, 30, 12, 0, 0);
+                Assert.IsTrue(oh.IsNowOpen());//mi
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 07, 1, 12, 0, 0);
+                Assert.IsTrue(oh.IsNowOpen());//do                           
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 07, 2, 12, 0, 0);
+                Assert.IsTrue(oh.IsNowOpen());//fr                           
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 07, 3, 12, 0, 0);
+                Assert.IsTrue(oh.IsNowOpen());//sa                           
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 07, 4, 12, 0, 0);
+                Assert.IsFalse(oh.IsNowOpen());//so
+            }
+        }
     }
 }
