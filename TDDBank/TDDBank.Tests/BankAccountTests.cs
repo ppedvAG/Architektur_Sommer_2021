@@ -51,6 +51,9 @@ namespace TDDBank.Tests
             ba.Withdraw(7m);
 
             Assert.That(ba.Balance, Is.EqualTo(3m));
+
+            ba.Withdraw(3m);
+            Assert.That(ba.Balance, Is.EqualTo(0m));
         }
 
         [Test]
