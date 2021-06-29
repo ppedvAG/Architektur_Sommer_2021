@@ -20,6 +20,7 @@ namespace Calculator.Test_NUnit
         }
 
         [Test]
+        [Category("Data Driven")]
         [TestCase(1, 2, 3)]
         [TestCase(0, 0, 0)]
         [TestCase(-1, -4, -5)]
@@ -31,6 +32,16 @@ namespace Calculator.Test_NUnit
             int result = calc.Sum(a, b);
 
             Assert.AreEqual(expected, result);
+        }
+
+
+        [Test]
+        public void TryToTestMe()
+        {
+            Calc calc = new Calc();
+            bool result = calc.TryToTestMe(true);
+
+            Assert.IsFalse(result);
         }
     }
 }

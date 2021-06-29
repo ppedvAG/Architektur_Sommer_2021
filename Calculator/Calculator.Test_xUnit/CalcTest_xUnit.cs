@@ -27,6 +27,7 @@ namespace Calculator.Test_xUnit
         }
 
         [Theory]
+        [Trait("Data Driven","")]
         [InlineData(1, 2, 3)]
         [InlineData(0, 0, 0)]
         [InlineData(-1, -4, -5)]

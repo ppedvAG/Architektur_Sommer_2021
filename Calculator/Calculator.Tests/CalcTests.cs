@@ -55,6 +55,7 @@ namespace Calculator.Tests
         }
 
         [TestMethod]
+        [TestCategory("Data Driven")]
         [DataRow(1, 2, 3)]
         [DataRow(0, 0, 0)]
         [DataRow(-1, -4, -5)]
