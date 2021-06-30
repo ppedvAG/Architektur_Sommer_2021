@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Data.EFCore.Tests", "ppedv.MovieThemeCollector.Data.EFCore.Tests\ppedv.MovieThemeCollector.Data.EFCore.Tests.csproj", "{45A8C1DD-E85B-419E-B3AE-D3683E091A95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Device.ACME", "ppedv.MovieThemeCollector.Device.ACME\ppedv.MovieThemeCollector.Device.ACME.csproj", "{F252500B-2854-45DE-8D7F-6A5D13471673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Device.ACME.Tests", "ppedv.MovieThemeCollector.Device.ACME.Tests\ppedv.MovieThemeCollector.Device.ACME.Tests.csproj", "{203DB939-72EB-49EE-A83E-14CF83C1B976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{45A8C1DD-E85B-419E-B3AE-D3683E091A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A8C1DD-E85B-419E-B3AE-D3683E091A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A8C1DD-E85B-419E-B3AE-D3683E091A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F252500B-2854-45DE-8D7F-6A5D13471673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F252500B-2854-45DE-8D7F-6A5D13471673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F252500B-2854-45DE-8D7F-6A5D13471673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F252500B-2854-45DE-8D7F-6A5D13471673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{203DB939-72EB-49EE-A83E-14CF83C1B976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{203DB939-72EB-49EE-A83E-14CF83C1B976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{203DB939-72EB-49EE-A83E-14CF83C1B976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{203DB939-72EB-49EE-A83E-14CF83C1B976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
