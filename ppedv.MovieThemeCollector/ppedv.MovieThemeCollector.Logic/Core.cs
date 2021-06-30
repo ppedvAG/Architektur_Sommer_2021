@@ -1,4 +1,6 @@
-﻿using ppedv.MovieThemeCollector.Contracts.Interfaces;
+﻿using ppedv.MovieThemeCollector.Contracts;
+using ppedv.MovieThemeCollector.Contracts.Interfaces;
+using System.Linq;
 
 namespace ppedv.MovieThemeCollector.Logic
 {
@@ -13,5 +15,9 @@ namespace ppedv.MovieThemeCollector.Logic
             Repo = repo;
         }
 
+        public Movie GetLatestMovie()
+        {
+            return Repo.Query<Movie>().OrderByDescending(x => x.Published.Date).ThenBy(x => x.Title).FirstOrDefault();
+        }
     }
 }
