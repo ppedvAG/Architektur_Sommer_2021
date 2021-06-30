@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Contracts", "ppedv.MovieThemeCollector.Contracts\ppedv.MovieThemeCollector.Contracts.csproj", "{230C7658-11DC-4175-84CF-FABCD0E0FCB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Data.EFCore", "ppedv.MovieThemeCollector.Data.EFCore\ppedv.MovieThemeCollector.Data.EFCore.csproj", "{C8632945-D920-454C-A524-E3092ED8B43D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Data.EFCore.Tests", "ppedv.MovieThemeCollector.Data.EFCore.Tests\ppedv.MovieThemeCollector.Data.EFCore.Tests.csproj", "{45A8C1DD-E85B-419E-B3AE-D3683E091A95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{230C7658-11DC-4175-84CF-FABCD0E0FCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{230C7658-11DC-4175-84CF-FABCD0E0FCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{230C7658-11DC-4175-84CF-FABCD0E0FCB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8632945-D920-454C-A524-E3092ED8B43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8632945-D920-454C-A524-E3092ED8B43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8632945-D920-454C-A524-E3092ED8B43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8632945-D920-454C-A524-E3092ED8B43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A8C1DD-E85B-419E-B3AE-D3683E091A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A8C1DD-E85B-419E-B3AE-D3683E091A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A8C1DD-E85B-419E-B3AE-D3683E091A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A8C1DD-E85B-419E-B3AE-D3683E091A95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
