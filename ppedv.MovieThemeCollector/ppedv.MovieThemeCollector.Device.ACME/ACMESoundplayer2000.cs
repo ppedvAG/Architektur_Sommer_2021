@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ppedv.MovieThemeCollector.Common;
+using System;
 
 namespace ppedv.MovieThemeCollector.Device.ACME
 {
@@ -6,6 +7,7 @@ namespace ppedv.MovieThemeCollector.Device.ACME
     {
         public void Play(int freq, int duration)
         {
+            Logger.Instance.Info("ACMESoundplayer2000");
             Console.Beep(freq, duration);
         }
     }
