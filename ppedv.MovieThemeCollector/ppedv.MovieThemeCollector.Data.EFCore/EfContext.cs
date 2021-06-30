@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ppedv.MovieThemeCollector.Common;
 using ppedv.MovieThemeCollector.Contracts;
 using System;
 
@@ -22,6 +23,8 @@ namespace ppedv.MovieThemeCollector.Data.EFCore
             base.OnConfiguring(optionsBuilder);
 
             optionsBuilder.UseSqlServer(ConString).UseLazyLoadingProxies();
+            
+            optionsBuilder.LogTo(x => Logger.Instance.Info(x), Microsoft.Extensions.Logging.LogLevel.Information);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,6 +34,8 @@ namespace ppedv.MovieThemeCollector.Data.EFCore
             modelBuilder.Entity<Movie>().HasMany(x => x.Actors).WithMany(x => x.AsActor).UsingEntity(x => x.ToTable("MovieActors"));
             modelBuilder.Entity<Movie>().HasMany(x => x.Directors).WithMany(x => x.AsDirector).UsingEntity(x => x.ToTable("MovieDirectors"));
             modelBuilder.Entity<Movie>().HasMany(x => x.Debutants).WithOne(x => x.Debut).OnDelete(DeleteBehavior.SetNull);
+
+
         }
     }
 }

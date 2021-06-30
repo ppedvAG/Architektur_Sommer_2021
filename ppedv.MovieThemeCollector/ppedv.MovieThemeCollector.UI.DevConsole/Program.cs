@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ppedv.MovieThemeCollector.Common;
+﻿using ppedv.MovieThemeCollector.Common;
 using ppedv.MovieThemeCollector.Contracts;
 using ppedv.MovieThemeCollector.Logic;
 using System;
@@ -18,7 +17,7 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
             core.Device.Play(300, 200);
 
             var query = core.Repo.Query<Movie>().Where(x => !string.IsNullOrWhiteSpace(x.Title));
-            Logger.Instance.Info($"Query: {query.ToQueryString()}");
+            //Logger.Instance.Info($"Query: {query.ToQueryString()}");
             foreach (var item in query.ToList())
             {
                 Console.WriteLine($"{item.Title}");
