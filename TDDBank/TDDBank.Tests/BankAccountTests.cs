@@ -72,7 +72,7 @@ namespace TDDBank.Tests
         public void Withdraw_below_zero_as_balancs_throws()
         {
             var ba = new BankAccount();
-            
+
             ba.Deposit(15m);
 
             Assert.Throws<InvalidOperationException>(() => ba.Withdraw(16m));
