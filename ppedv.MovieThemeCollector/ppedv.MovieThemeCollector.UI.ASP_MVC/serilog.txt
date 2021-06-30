@@ -1,0 +1,137 @@
+2021-06-30 16:58:13.465 +02:00 [INF] info: 30.06.2021 16:58:13.357 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 16:58:14.245 +02:00 [INF] info: 30.06.2021 16:58:14.245 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 16:58:31.460 +02:00 [INF] info: 30.06.2021 16:58:31.460 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 16:58:31.468 +02:00 [INF] info: 30.06.2021 16:58:31.468 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:00:39.240 +02:00 [INF] info: 30.06.2021 17:00:39.206 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:00:39.652 +02:00 [INF] info: 30.06.2021 17:00:39.652 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:02:33.908 +02:00 [INF] info: 30.06.2021 17:02:33.876 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:02:34.345 +02:00 [INF] info: 30.06.2021 17:02:34.345 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:04:08.491 +02:00 [INF] info: 30.06.2021 17:04:08.455 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:04:08.932 +02:00 [INF] info: 30.06.2021 17:04:08.932 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:04:11.374 +02:00 [INF] info: 30.06.2021 17:04:11.374 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:04:11.460 +02:00 [INF] info: 30.06.2021 17:04:11.460 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+      WHERE [m].[Id] = @__p_0
+2021-06-30 17:04:33.989 +02:00 [INF] info: 30.06.2021 17:04:33.957 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:04:34.409 +02:00 [INF] info: 30.06.2021 17:04:34.409 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:04:37.327 +02:00 [INF] info: 30.06.2021 17:04:37.327 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:04:37.408 +02:00 [INF] info: 30.06.2021 17:04:37.408 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+      WHERE [m].[Id] = @__p_0
+2021-06-30 17:04:48.973 +02:00 [INF] info: 30.06.2021 17:04:48.972 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:04:48.974 +02:00 [INF] info: 30.06.2021 17:04:48.974 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:06:14.467 +02:00 [INF] info: 30.06.2021 17:06:14.436 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:06:14.929 +02:00 [INF] info: 30.06.2021 17:06:14.929 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:07:40.874 +02:00 [INF] info: 30.06.2021 17:07:40.824 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:07:41.324 +02:00 [INF] info: 30.06.2021 17:07:41.324 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:07:51.243 +02:00 [INF] info: 30.06.2021 17:07:51.243 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:07:51.354 +02:00 [INF] info: 30.06.2021 17:07:51.354 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Movies] ([Length], [Modified], [Published], [SoundTheme], [Title])
+      VALUES (@p0, @p1, @p2, @p3, @p4);
+      SELECT [Id]
+      FROM [Movies]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-06-30 17:07:51.390 +02:00 [INF] info: 30.06.2021 17:07:51.390 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:07:51.391 +02:00 [INF] info: 30.06.2021 17:07:51.391 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:10:48.100 +02:00 [INF] info: 30.06.2021 17:10:48.067 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:10:48.521 +02:00 [INF] info: 30.06.2021 17:10:48.521 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:10:51.627 +02:00 [INF] info: 30.06.2021 17:10:51.627 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:10:51.714 +02:00 [INF] info: 30.06.2021 17:10:51.714 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+      WHERE [m].[Id] = @__p_0
+2021-06-30 17:10:58.085 +02:00 [INF] info: 30.06.2021 17:10:58.085 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:10:58.161 +02:00 [INF] info: 30.06.2021 17:10:58.161 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (5ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Movies] SET [Length] = @p0, [Modified] = @p1, [Published] = @p2, [SoundTheme] = @p3, [Title] = @p4
+      WHERE [Id] = @p5;
+      SELECT @@ROWCOUNT;
+2021-06-30 17:10:58.173 +02:00 [INF] info: 30.06.2021 17:10:58.173 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:10:58.174 +02:00 [INF] info: 30.06.2021 17:10:58.174 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+2021-06-30 17:11:02.590 +02:00 [INF] info: 30.06.2021 17:11:02.590 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:11:02.594 +02:00 [INF] info: 30.06.2021 17:11:02.594 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+      WHERE [m].[Id] = @__p_0
+2021-06-30 17:11:03.873 +02:00 [INF] info: 30.06.2021 17:11:03.873 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:11:03.874 +02:00 [INF] info: 30.06.2021 17:11:03.874 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
+      WHERE [m].[Id] = @__p_0
+2021-06-30 17:11:03.892 +02:00 [INF] info: 30.06.2021 17:11:03.892 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DELETE FROM [Movies]
+      WHERE [Id] = @p0;
+      SELECT @@ROWCOUNT;
+2021-06-30 17:11:03.904 +02:00 [INF] info: 30.06.2021 17:11:03.904 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.7 initialized 'EfContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-06-30 17:11:03.904 +02:00 [INF] info: 30.06.2021 17:11:03.904 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [m].[Id], [m].[Length], [m].[Modified], [m].[Published], [m].[SoundTheme], [m].[Title]
+      FROM [Movies] AS [m]
