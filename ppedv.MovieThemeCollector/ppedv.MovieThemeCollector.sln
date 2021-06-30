@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.L
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{75188A01-AB5E-4B9F-887A-28CAEABCC568}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.UI.ASP_MVC", "ppedv.MovieThemeCollector.UI.ASP_MVC\ppedv.MovieThemeCollector.UI.ASP_MVC.csproj", "{F9897458-CCB3-4BC8-B907-06F6D1D90C2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{BE85694B-EFA3-46A7-946D-D1B51661F18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE85694B-EFA3-46A7-946D-D1B51661F18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE85694B-EFA3-46A7-946D-D1B51661F18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9897458-CCB3-4BC8-B907-06F6D1D90C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9897458-CCB3-4BC8-B907-06F6D1D90C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9897458-CCB3-4BC8-B907-06F6D1D90C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9897458-CCB3-4BC8-B907-06F6D1D90C2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{F252500B-2854-45DE-8D7F-6A5D13471673} = {B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}
 		{203DB939-72EB-49EE-A83E-14CF83C1B976} = {B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}
 		{39AFE9C2-B0C2-4C69-883C-ED393059020A} = {75188A01-AB5E-4B9F-887A-28CAEABCC568}
+		{F9897458-CCB3-4BC8-B907-06F6D1D90C2C} = {75188A01-AB5E-4B9F-887A-28CAEABCC568}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C607205-6F36-4318-9533-2FE9353B0DE4}
