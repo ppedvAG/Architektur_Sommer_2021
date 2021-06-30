@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.MovieThemeCollector.Common\ppedv.MovieThemeCollector.Common.csproj" />
+    <ProjectReference Include="..\ppedv.MovieThemeCollector.Contracts\ppedv.MovieThemeCollector.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

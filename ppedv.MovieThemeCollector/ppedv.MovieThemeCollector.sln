@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Common", "ppedv.MovieThemeCollector.Common\ppedv.MovieThemeCollector.Common.csproj", "{84F748BE-0C59-414F-9C91-B7F6E1B28B3B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Devices", "Devices", "{B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6ED3FB7D-679F-4031-8465-03A67E3EB6F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Logic", "ppedv.MovieThemeCollector.Logic\ppedv.MovieThemeCollector.Logic.csproj", "{61CB951C-E5DD-4939-BF6A-663223D36A54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,9 +51,19 @@ Global
 		{84F748BE-0C59-414F-9C91-B7F6E1B28B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84F748BE-0C59-414F-9C91-B7F6E1B28B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84F748BE-0C59-414F-9C91-B7F6E1B28B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CB951C-E5DD-4939-BF6A-663223D36A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CB951C-E5DD-4939-BF6A-663223D36A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CB951C-E5DD-4939-BF6A-663223D36A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CB951C-E5DD-4939-BF6A-663223D36A54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8632945-D920-454C-A524-E3092ED8B43D} = {6ED3FB7D-679F-4031-8465-03A67E3EB6F6}
+		{45A8C1DD-E85B-419E-B3AE-D3683E091A95} = {6ED3FB7D-679F-4031-8465-03A67E3EB6F6}
+		{F252500B-2854-45DE-8D7F-6A5D13471673} = {B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}
+		{203DB939-72EB-49EE-A83E-14CF83C1B976} = {B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C607205-6F36-4318-9533-2FE9353B0DE4}
