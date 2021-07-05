@@ -14,7 +14,7 @@ namespace ppedv.MovieThemeCollector.Data.EFCore
             this.con = con;
         }
 
-        public void Add(T entity)
+        public virtual void Add(T entity)
         {
             con.Add(entity);
         }

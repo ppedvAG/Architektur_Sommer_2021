@@ -8,6 +8,8 @@ namespace ppedv.MovieThemeCollector.Data.EFCore
     {
         EfContext con = new EfContext();
 
+        public IMovieRepository MovieRepository => new EfMovieRepository(con);
+
         public void Dispose()
         {
             con.Dispose();
@@ -15,6 +17,9 @@ namespace ppedv.MovieThemeCollector.Data.EFCore
 
         public IRepository<T> GetRepo<T>() where T : Entity
         {
+            if (typeof(T) == typeof(Movie))
+                return new EfMovieRepository(con) as IRepository<T>;
+
             return new EfRepository<T>(con);
         }
         public int Save()

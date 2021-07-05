@@ -26,6 +26,18 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
                 Console.WriteLine($"\tDebutants: {string.Join(", ", item.Debutants.Select(x => x.Name))}");
             }
 
+            core.UnitOfWork.GetRepo<Movie>().Add(new Movie() { Title = "" }); //im log sehen wir die überschriebene Add implementierung
+            core.UnitOfWork.MovieRepository.Add(new Movie() { Title = "" }); //im log sehen wir die überschriebene Add implementierung
+
+            //Stored Proc erstellen
+            //CREATE PROCEDURE dbo.GetMoviesOrderdByYear
+            //AS
+            //SELECT* FROM Movies ORDER BY DATEPART(Year, Published)
+            foreach (var item in core.UnitOfWork.MovieRepository.GetMovieFromThatSpecialStroedProc())
+            {
+                Console.WriteLine($"STORED-PROC: {item.Title}");
+            }
+
             Console.WriteLine("Ende");
             Console.ReadLine();
         }
