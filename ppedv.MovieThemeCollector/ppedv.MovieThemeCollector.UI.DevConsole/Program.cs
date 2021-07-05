@@ -1,4 +1,5 @@
-﻿using ppedv.MovieThemeCollector.Common;
+﻿using Autofac;
+using ppedv.MovieThemeCollector.Common;
 using ppedv.MovieThemeCollector.Contracts;
 using ppedv.MovieThemeCollector.Contracts.Interfaces;
 using ppedv.MovieThemeCollector.Logic;
@@ -17,17 +18,30 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
 
 #if DEBUG
             var deviceLibPath = @$"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Device.ACME\bin\Debug\net5.0\ppedv.MovieThemeCollector.Device.ACME.dll";
+            var dataLibPath = $@"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Data.EFCore\bin\Debug\net5.0\ppedv.MovieThemeCollector.Data.EFCore.dll";
 #else
             var deviceLibPath= @$"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Device.ACME\bin\Release\net5.0\ppedv.MovieThemeCollector.Device.ACME.dll";
+            var dataLibPath = $@"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Data.EFCore\bin\Release\net5.0\ppedv.MovieThemeCollector.Data.EFCore.dll";
 #endif
 
             Console.WriteLine(deviceLibPath);
 
-            var ass = Assembly.LoadFrom(deviceLibPath);
-            Type typeWithIDevice = ass.GetTypes().FirstOrDefault(x => x.GetInterfaces().Contains(typeof(IDevice)));
+            var deviceAss = Assembly.LoadFrom(deviceLibPath);
+            Type typeWithIDevice = deviceAss.GetTypes().FirstOrDefault(x => x.GetInterfaces().Contains(typeof(IDevice)));
             IDevice device = (IDevice)Activator.CreateInstance(typeWithIDevice);
 
-            var core = new Core(device, new Data.EFCore.EfUnitOfWork());
+            var dataAss = Assembly.LoadFrom(dataLibPath);
+            var builder = new ContainerBuilder();
+            
+            builder.RegisterAssemblyTypes(dataAss).Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes(dataAss).Where(t => t.Name.EndsWith("UnitOfWork")).AsImplementedInterfaces();
+            //builder.RegisterType<Data.EFCore.EfUnitOfWork>().As<IUnitOfWork>();
+            //builder.RegisterType(typeof(Data.EFCore.EfMovieRepository)).As(typeof(IMovieRepository));
+            var container = builder.Build();
+            container.Resolve<IUnitOfWork>();
+
+            var core = new Core(device, container.Resolve<IUnitOfWork>());
+            //var core = new Core(device,null);
             //var core = new Core(new Device.ACME.ACMESoundplayer2000(), new Data.EFCore.EfUnitOfWork());
 
 
