@@ -19,9 +19,11 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
 #if DEBUG
             var deviceLibPath = @$"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Device.ACME\bin\Debug\net5.0\ppedv.MovieThemeCollector.Device.ACME.dll";
             var dataLibPath = $@"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Data.EFCore\bin\Debug\net5.0\ppedv.MovieThemeCollector.Data.EFCore.dll";
+            var demoLibPath = $@"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Data.BogusDemoData\bin\Debug\net5.0\ppedv.MovieThemeCollector.Data.BogusDemoData.dll";
 #else
             var deviceLibPath= @$"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Device.ACME\bin\Release\net5.0\ppedv.MovieThemeCollector.Device.ACME.dll";
             var dataLibPath = $@"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Data.EFCore\bin\Release\net5.0\ppedv.MovieThemeCollector.Data.EFCore.dll";
+            var demoLibPath = $@"C:\Users\Fred\source\repos\ppedvAG\Architektur_Sommer_2021\ppedv.MovieThemeCollector\ppedv.MovieThemeCollector.Data.BogusDemoData\bin\Release\net5.0\ppedv.MovieThemeCollector.Data.BogusDemoData.dll";
 #endif
 
             Console.WriteLine(deviceLibPath);
@@ -31,18 +33,28 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
             IDevice device = (IDevice)Activator.CreateInstance(typeWithIDevice);
 
             var dataAss = Assembly.LoadFrom(dataLibPath);
+            var demoAss = Assembly.LoadFrom(demoLibPath);
             var builder = new ContainerBuilder();
             
             builder.RegisterAssemblyTypes(dataAss).Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces();
             builder.RegisterAssemblyTypes(dataAss).Where(t => t.Name.EndsWith("UnitOfWork")).AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes(demoAss).Where(t => t.Name.EndsWith("BogusDemoDataService")).AsImplementedInterfaces();
+            
             //builder.RegisterType<Data.EFCore.EfUnitOfWork>().As<IUnitOfWork>();
             //builder.RegisterType(typeof(Data.EFCore.EfMovieRepository)).As(typeof(IMovieRepository));
             var container = builder.Build();
-            container.Resolve<IUnitOfWork>();
+            
 
             var core = new Core(device, container.Resolve<IUnitOfWork>());
             //var core = new Core(device,null);
             //var core = new Core(new Device.ACME.ACMESoundplayer2000(), new Data.EFCore.EfUnitOfWork());
+
+            Console.WriteLine($"Sollen Demodaten generiert werden? [j/n]");
+            if(Console.ReadKey().Key == ConsoleKey.J)
+            {
+                var demoService =new DemoService(container.Resolve<IUnitOfWork>(),container.Resolve<IDemoDataService>());
+                demoService.CreateDemoDataAndStoreInDatabase();
+            }
 
 
             core.Device.Play(300, 200);
