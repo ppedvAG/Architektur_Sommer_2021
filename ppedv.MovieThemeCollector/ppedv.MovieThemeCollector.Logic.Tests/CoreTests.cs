@@ -14,9 +14,13 @@ namespace ppedv.MovieThemeCollector.Logic.Tests
         [Test]
         public void GetLatestMovie_no_movie_in_repo_returns_null()
         {
-            var repo = A.Fake<IRepository>();
-            A.CallTo(() => repo.Query<Movie>()).Returns(new List<Movie>().AsQueryable());
-            var core = new Core(null, repo);
+            var repo = A.Fake<IRepository<Movie>>();
+            A.CallTo(() => repo.Query()).Returns(new List<Movie>().AsQueryable());
+            
+            var uow = A.Fake<IUnitOfWork>();
+            A.CallTo(()=>uow.GetRepo<Movie>()).Returns(repo);
+
+            var core = new Core(null, uow);
 
             var result = core.GetLatestMovie();
 
@@ -28,9 +32,11 @@ namespace ppedv.MovieThemeCollector.Logic.Tests
         {
             var m1 = new Movie() { Title = "m1", Published = DateTime.Now.AddDays(-3) };
             var m2 = new Movie() { Title = "m2", Published = DateTime.Now.AddDays(-2) };
-            var repo = A.Fake<IRepository>();
-            A.CallTo(() => repo.Query<Movie>()).Returns(new[] { m1, m2 }.AsQueryable());
-            var core = new Core(null, repo);
+            var repo = A.Fake<IRepository<Movie>>();
+            A.CallTo(() => repo.Query()).Returns(new[] { m1, m2 }.AsQueryable());
+            var uow = A.Fake<IUnitOfWork>();
+            A.CallTo(() => uow.GetRepo<Movie>()).Returns(repo);
+            var core = new Core(null, uow);
 
             var result = core.GetLatestMovie();
 
@@ -43,9 +49,11 @@ namespace ppedv.MovieThemeCollector.Logic.Tests
             var m1 = new Movie() { Title = "m1", Published = DateTime.Now };
             var m2 = new Movie() { Title = "m02", Published = DateTime.Now };
             var m3 = new Movie() { Title = "m3", Published = DateTime.Now };
-            var repo = A.Fake<IRepository>();
-            A.CallTo(() => repo.Query<Movie>()).Returns(new[] { m1, m2, m3 }.AsQueryable());
-            var core = new Core(null, repo);
+            var repo = A.Fake<IRepository<Movie>>();
+            A.CallTo(() => repo.Query()).Returns(new[] { m1, m2, m3 }.AsQueryable());
+            var uow = A.Fake<IUnitOfWork>();
+            A.CallTo(() => uow.GetRepo<Movie>()).Returns(repo);
+            var core = new Core(null, uow);
 
             var result = core.GetLatestMovie();
 

@@ -7,17 +7,17 @@ namespace ppedv.MovieThemeCollector.Logic
     public class Core
     {
         public IDevice Device { get; }
-        public IRepository Repo { get; }
+        public IUnitOfWork UnitOfWork { get; }
 
-        public Core(IDevice device, IRepository repo)
+        public Core(IDevice device, IUnitOfWork uow)
         {
             Device = device;
-            Repo = repo;
+            UnitOfWork = uow;
         }
 
         public Movie GetLatestMovie()
         {
-            return Repo.Query<Movie>().OrderByDescending(x => x.Published.Date).ThenBy(x => x.Title).FirstOrDefault();
+            return UnitOfWork.GetRepo<Movie>().Query().OrderByDescending(x => x.Published.Date).ThenBy(x => x.Title).FirstOrDefault();
         }
     }
 }

@@ -1,50 +1,47 @@
 ﻿using ppedv.MovieThemeCollector.Contracts;
 using ppedv.MovieThemeCollector.Contracts.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ppedv.MovieThemeCollector.Data.EFCore
 {
-    public class EfRepository : IRepository
-    {
-        EfContext con = new EfContext();
 
-        public void Add<T>(T entity) where T : Entity
+    public class EfRepository<T> : IRepository<T> where T : Entity
+    {
+        protected EfContext con;
+
+        public EfRepository(EfContext con)
+        {
+            this.con = con;
+        }
+
+        public void Add(T entity)
         {
             con.Add(entity);
         }
 
-        public void Delete<T>(T entity) where T : Entity
+        public void Delete(T entity)
         {
             con.Remove(entity);
         }
 
-        public void DeleteById<T>(int id) where T : Entity
+        public void DeleteById(int id)
         {
-            var loaded = GetById<T>(id);
+            var loaded = GetById(id);
             if (loaded != null)
                 con.Remove(loaded);
         }
 
-        public T GetById<T>(int id) where T : Entity
+        public T GetById(int id)
         {
             return con.Find<T>(id);
         }
 
-        public IQueryable<T> Query<T>() where T : Entity
+        public IQueryable<T> Query()
         {
             return con.Set<T>();
         }
 
-        public int Save()
-        {
-            return con.SaveChanges();
-        }
-
-        public void Update<T>(T entity) where T : Entity
+        public void Update(T entity)
         {
             con.Update(entity);
         }

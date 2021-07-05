@@ -12,18 +12,18 @@ namespace ppedv.MovieThemeCollector.UI.ASP_MVC.Controllers
     public class MovieController : Controller
     {
 
-        Core core = new Core(null, new Data.EFCore.EfRepository());
+        Core core = new Core(null, new Data.EFCore.EfUnitOfWork());
 
         // GET: MovieController
         public ActionResult Index()
         {
-            return View(core.Repo.Query<Movie>().ToList());
+            return View(core.UnitOfWork.GetRepo<Movie>().Query().ToList());
         }
 
         // GET: MovieController/Details/5
         public ActionResult Details(int id)
         {
-            return View(core.Repo.GetById<Movie>(id));
+            return View(core.UnitOfWork.GetRepo<Movie>().GetById(id));
         }
 
         // GET: MovieController/Create
@@ -39,8 +39,8 @@ namespace ppedv.MovieThemeCollector.UI.ASP_MVC.Controllers
         {
             try
             {
-                core.Repo.Add(movie);
-                core.Repo.Save();
+                core.UnitOfWork.GetRepo<Movie>().Add(movie);
+                core.UnitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -52,7 +52,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_MVC.Controllers
         // GET: MovieController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(core.Repo.GetById<Movie>(id));
+            return View(core.UnitOfWork.GetRepo<Movie>().GetById(id));
 
         }
 
@@ -63,8 +63,8 @@ namespace ppedv.MovieThemeCollector.UI.ASP_MVC.Controllers
         {
             try
             {
-                core.Repo.Update(movie);
-                core.Repo.Save();
+                core.UnitOfWork.GetRepo<Movie>().Update(movie);
+                core.UnitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -76,7 +76,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_MVC.Controllers
         // GET: MovieController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(core.Repo.GetById<Movie>(id));
+            return View(core.UnitOfWork.GetRepo<Movie>().GetById(id));
 
         }
 
@@ -87,8 +87,8 @@ namespace ppedv.MovieThemeCollector.UI.ASP_MVC.Controllers
         {
             try
             {
-                core.Repo.DeleteById<Movie>(id);
-                core.Repo.Save();
+                core.UnitOfWork.GetRepo<Movie>().DeleteById(id);
+                core.UnitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
             catch

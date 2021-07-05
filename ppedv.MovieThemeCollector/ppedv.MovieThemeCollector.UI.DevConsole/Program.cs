@@ -13,10 +13,10 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
             Logger.Instance.Info("Consolen UI gestartet");
             Console.WriteLine("Hello World!");
 
-            var core = new Core(new Device.ACME.ACMESoundplayer2000(), new Data.EFCore.EfRepository());
+            var core = new Core(new Device.ACME.ACMESoundplayer2000(), new Data.EFCore.EfUnitOfWork());
             core.Device.Play(300, 200);
 
-            var query = core.Repo.Query<Movie>().Where(x => !string.IsNullOrWhiteSpace(x.Title));
+            var query = core.UnitOfWork.GetRepo<Movie>().Query().Where(x => !string.IsNullOrWhiteSpace(x.Title));
             //Logger.Instance.Info($"Query: {query.ToQueryString()}");
             foreach (var item in query.ToList())
             {

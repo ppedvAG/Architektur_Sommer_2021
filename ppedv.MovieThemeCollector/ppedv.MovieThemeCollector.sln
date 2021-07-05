@@ -3,31 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Contracts", "ppedv.MovieThemeCollector.Contracts\ppedv.MovieThemeCollector.Contracts.csproj", "{230C7658-11DC-4175-84CF-FABCD0E0FCB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Contracts", "ppedv.MovieThemeCollector.Contracts\ppedv.MovieThemeCollector.Contracts.csproj", "{230C7658-11DC-4175-84CF-FABCD0E0FCB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Data.EFCore", "ppedv.MovieThemeCollector.Data.EFCore\ppedv.MovieThemeCollector.Data.EFCore.csproj", "{C8632945-D920-454C-A524-E3092ED8B43D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Data.EFCore", "ppedv.MovieThemeCollector.Data.EFCore\ppedv.MovieThemeCollector.Data.EFCore.csproj", "{C8632945-D920-454C-A524-E3092ED8B43D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Data.EFCore.Tests", "ppedv.MovieThemeCollector.Data.EFCore.Tests\ppedv.MovieThemeCollector.Data.EFCore.Tests.csproj", "{45A8C1DD-E85B-419E-B3AE-D3683E091A95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Data.EFCore.Tests", "ppedv.MovieThemeCollector.Data.EFCore.Tests\ppedv.MovieThemeCollector.Data.EFCore.Tests.csproj", "{45A8C1DD-E85B-419E-B3AE-D3683E091A95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Device.ACME", "ppedv.MovieThemeCollector.Device.ACME\ppedv.MovieThemeCollector.Device.ACME.csproj", "{F252500B-2854-45DE-8D7F-6A5D13471673}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Device.ACME", "ppedv.MovieThemeCollector.Device.ACME\ppedv.MovieThemeCollector.Device.ACME.csproj", "{F252500B-2854-45DE-8D7F-6A5D13471673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Device.ACME.Tests", "ppedv.MovieThemeCollector.Device.ACME.Tests\ppedv.MovieThemeCollector.Device.ACME.Tests.csproj", "{203DB939-72EB-49EE-A83E-14CF83C1B976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Device.ACME.Tests", "ppedv.MovieThemeCollector.Device.ACME.Tests\ppedv.MovieThemeCollector.Device.ACME.Tests.csproj", "{203DB939-72EB-49EE-A83E-14CF83C1B976}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Common", "ppedv.MovieThemeCollector.Common\ppedv.MovieThemeCollector.Common.csproj", "{84F748BE-0C59-414F-9C91-B7F6E1B28B3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Common", "ppedv.MovieThemeCollector.Common\ppedv.MovieThemeCollector.Common.csproj", "{84F748BE-0C59-414F-9C91-B7F6E1B28B3B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Devices", "Devices", "{B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6ED3FB7D-679F-4031-8465-03A67E3EB6F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Logic", "ppedv.MovieThemeCollector.Logic\ppedv.MovieThemeCollector.Logic.csproj", "{61CB951C-E5DD-4939-BF6A-663223D36A54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Logic", "ppedv.MovieThemeCollector.Logic\ppedv.MovieThemeCollector.Logic.csproj", "{61CB951C-E5DD-4939-BF6A-663223D36A54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.UI.DevConsole", "ppedv.MovieThemeCollector.UI.DevConsole\ppedv.MovieThemeCollector.UI.DevConsole.csproj", "{39AFE9C2-B0C2-4C69-883C-ED393059020A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.UI.DevConsole", "ppedv.MovieThemeCollector.UI.DevConsole\ppedv.MovieThemeCollector.UI.DevConsole.csproj", "{39AFE9C2-B0C2-4C69-883C-ED393059020A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.Logic.Tests", "ppedv.MovieThemeCollector.Logic.Tests\ppedv.MovieThemeCollector.Logic.Tests.csproj", "{BE85694B-EFA3-46A7-946D-D1B51661F18D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.Logic.Tests", "ppedv.MovieThemeCollector.Logic.Tests\ppedv.MovieThemeCollector.Logic.Tests.csproj", "{BE85694B-EFA3-46A7-946D-D1B51661F18D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{75188A01-AB5E-4B9F-887A-28CAEABCC568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.UI.ASP_MVC", "ppedv.MovieThemeCollector.UI.ASP_MVC\ppedv.MovieThemeCollector.UI.ASP_MVC.csproj", "{F9897458-CCB3-4BC8-B907-06F6D1D90C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.UI.ASP_MVC", "ppedv.MovieThemeCollector.UI.ASP_MVC\ppedv.MovieThemeCollector.UI.ASP_MVC.csproj", "{F9897458-CCB3-4BC8-B907-06F6D1D90C2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{66AA80E3-EAE5-411A-80E6-E6CC90123545}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{5147BD77-4358-4A9B-A000-449B7DB2C371}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,11 +84,15 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{230C7658-11DC-4175-84CF-FABCD0E0FCB3} = {66AA80E3-EAE5-411A-80E6-E6CC90123545}
 		{C8632945-D920-454C-A524-E3092ED8B43D} = {6ED3FB7D-679F-4031-8465-03A67E3EB6F6}
 		{45A8C1DD-E85B-419E-B3AE-D3683E091A95} = {6ED3FB7D-679F-4031-8465-03A67E3EB6F6}
 		{F252500B-2854-45DE-8D7F-6A5D13471673} = {B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}
 		{203DB939-72EB-49EE-A83E-14CF83C1B976} = {B4A99149-12FB-43A7-ABD4-2D35B27C2CB7}
+		{84F748BE-0C59-414F-9C91-B7F6E1B28B3B} = {66AA80E3-EAE5-411A-80E6-E6CC90123545}
+		{61CB951C-E5DD-4939-BF6A-663223D36A54} = {5147BD77-4358-4A9B-A000-449B7DB2C371}
 		{39AFE9C2-B0C2-4C69-883C-ED393059020A} = {75188A01-AB5E-4B9F-887A-28CAEABCC568}
+		{BE85694B-EFA3-46A7-946D-D1B51661F18D} = {5147BD77-4358-4A9B-A000-449B7DB2C371}
 		{F9897458-CCB3-4BC8-B907-06F6D1D90C2C} = {75188A01-AB5E-4B9F-887A-28CAEABCC568}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

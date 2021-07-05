@@ -2,17 +2,15 @@
 
 namespace ppedv.MovieThemeCollector.Contracts.Interfaces
 {
-    public interface IRepository
+    public interface IRepository<T> where T : Entity
     {
-        IQueryable<T> Query<T>() where T : Entity;
-        T GetById<T>(int id) where T : Entity;
+        IQueryable<T> Query();
+        T GetById(int id);
 
-        void Add<T>(T entity) where T : Entity;
-        void Delete<T>(T entity) where T : Entity;
-        void DeleteById<T>(int id) where T : Entity;
-        void Update<T>(T entity) where T : Entity;
+        void Add(T entity);
+        void Delete(T entity);
+        void DeleteById(int id);
+        void Update(T entity);
 
-
-        int Save();
     }
 }
