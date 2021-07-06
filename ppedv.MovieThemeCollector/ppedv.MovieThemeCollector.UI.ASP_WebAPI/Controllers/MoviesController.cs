@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ppedv.MovieThemeCollector.Contracts;
+using ppedv.MovieThemeCollector.Contracts.Interfaces;
 using ppedv.MovieThemeCollector.Logic;
 using ppedv.MovieThemeCollector.UI.ASP_WebAPI.Model;
 using System;
@@ -16,11 +17,12 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        Core core = new Core(null, new Data.EFCore.EfUnitOfWork());
+        Core core;
         MapperConfiguration mapperConfiguration;
 
-        public MoviesController()
+        public MoviesController(IUnitOfWork uow)
         {
+            core = new Core(null, uow);
 
             mapperConfiguration = new MapperConfiguration(cfg =>
             {
