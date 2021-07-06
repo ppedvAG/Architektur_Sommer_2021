@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ppedv.MovieThemeCollector.Contracts;
 using ppedv.MovieThemeCollector.Logic;
+using ppedv.MovieThemeCollector.Logic.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_MVC.Controllers
     public class MovieController : Controller
     {
 
-        Core core = new Core(null, new Data.EFCore.EfUnitOfWork());
+        MoviesService core = new MoviesService( new Data.EFCore.EfUnitOfWork());
 
         // GET: MovieController
         public ActionResult Index()
