@@ -1,0 +1,51 @@
+﻿@page "/movies"
+@using ppedv.MovieThemeCollector.Logic.Services
+@using ppedv.MovieThemeCollector.Contracts
+@inject MoviesService MoviesService
+
+<h1>MOVIES</h1>
+<hr />
+
+<table>
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Länge</td>
+            <td>KILL</td>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var m in movies)
+        {
+            <tr>
+                <td>@m.Title</td>
+                <td>@m.Length</td>
+                <td><button class="btn btn-primary" @onclick="()=>Kill(m)">Kill it</button> </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+@code {
+
+    private List<Movie> movies;
+
+    void Kill(Movie m)
+    {
+        MoviesService.DeleteMovie(m);
+        MoviesService.UnitOfWork.Save();
+        movies = MoviesService.UnitOfWork.MovieRepository.Query().ToList();
+
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        movies = MoviesService.UnitOfWork.MovieRepository.Query().ToList();
+
+        return base.OnInitializedAsync();
+
+    }
+}

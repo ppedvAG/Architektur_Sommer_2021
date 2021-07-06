@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.UI.ASP_WebAPI", "ppedv.MovieThemeCollector.UI.ASP_WebAPI\ppedv.MovieThemeCollector.UI.ASP_WebAPI.csproj", "{62A14783-0F2A-41AA-994D-8019D574305E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client", "ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client\ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client.csproj", "{F853A007-B580-432D-A9A6-25883C07B201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client", "ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client\ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client.csproj", "{F853A007-B580-432D-A9A6-25883C07B201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.MovieThemeCollector.UI.ASP_Blazor", "ppedv.MovieThemeCollector.UI.ASP_Blazor\ppedv.MovieThemeCollector.UI.ASP_Blazor.csproj", "{D529D41D-3B57-408C-BE2E-395ED247B6E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,10 @@ Global
 		{F853A007-B580-432D-A9A6-25883C07B201}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F853A007-B580-432D-A9A6-25883C07B201}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F853A007-B580-432D-A9A6-25883C07B201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D529D41D-3B57-408C-BE2E-395ED247B6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D529D41D-3B57-408C-BE2E-395ED247B6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D529D41D-3B57-408C-BE2E-395ED247B6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D529D41D-3B57-408C-BE2E-395ED247B6E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{E4DB2839-D0C8-4929-B7F3-9CEA5FBA4737} = {6ED3FB7D-679F-4031-8465-03A67E3EB6F6}
 		{62A14783-0F2A-41AA-994D-8019D574305E} = {75188A01-AB5E-4B9F-887A-28CAEABCC568}
 		{F853A007-B580-432D-A9A6-25883C07B201} = {75188A01-AB5E-4B9F-887A-28CAEABCC568}
+		{D529D41D-3B57-408C-BE2E-395ED247B6E3} = {75188A01-AB5E-4B9F-887A-28CAEABCC568}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C607205-6F36-4318-9533-2FE9353B0DE4}
