@@ -3,13 +3,14 @@ using FluentAssertions;
 using NUnit.Framework;
 using ppedv.MovieThemeCollector.Contracts;
 using ppedv.MovieThemeCollector.Contracts.Interfaces;
+using ppedv.MovieThemeCollector.Logic.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace ppedv.MovieThemeCollector.Logic.Tests
 {
-    public class CoreTests
+    public class MoviesServiceTest
     {
         [Test]
         public void GetLatestMovie_no_movie_in_repo_returns_null()
@@ -20,9 +21,9 @@ namespace ppedv.MovieThemeCollector.Logic.Tests
             var uow = A.Fake<IUnitOfWork>();
             A.CallTo(()=>uow.GetRepo<Movie>()).Returns(repo);
 
-            var core = new Core(null, uow);
+            var moviesService = new MoviesService(uow);
 
-            var result = core.GetLatestMovie();
+            var result = moviesService.GetLatestMovie();
 
             result.Should().BeNull();
         }
@@ -36,9 +37,9 @@ namespace ppedv.MovieThemeCollector.Logic.Tests
             A.CallTo(() => repo.Query()).Returns(new[] { m1, m2 }.AsQueryable());
             var uow = A.Fake<IUnitOfWork>();
             A.CallTo(() => uow.GetRepo<Movie>()).Returns(repo);
-            var core = new Core(null, uow);
+            var moviesService= new MoviesService( uow);
 
-            var result = core.GetLatestMovie();
+            var result = moviesService.GetLatestMovie();
 
             result.Should().Be(m2);
         }
@@ -53,9 +54,9 @@ namespace ppedv.MovieThemeCollector.Logic.Tests
             A.CallTo(() => repo.Query()).Returns(new[] { m1, m2, m3 }.AsQueryable());
             var uow = A.Fake<IUnitOfWork>();
             A.CallTo(() => uow.GetRepo<Movie>()).Returns(repo);
-            var core = new Core(null, uow);
+            var moviesService = new MoviesService( uow);
 
-            var result = core.GetLatestMovie();
+            var result = moviesService.GetLatestMovie();
 
             result.Should().Be(m2);
         }

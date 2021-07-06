@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ppedv.MovieThemeCollector.Contracts;
 using ppedv.MovieThemeCollector.Contracts.Interfaces;
 using ppedv.MovieThemeCollector.Logic;
+using ppedv.MovieThemeCollector.Logic.Services;
 using ppedv.MovieThemeCollector.UI.ASP_WebAPI.Model;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,12 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        Core core;
+        MoviesService moviesService;
         MapperConfiguration mapperConfiguration;
 
         public MoviesController(IUnitOfWork uow)
         {
-            core = new Core(null, uow);
+            moviesService = new MoviesService(uow);
 
             mapperConfiguration = new MapperConfiguration(cfg =>
             {
@@ -37,7 +38,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
         [HttpGet]
         public IEnumerable<MovieDTO> Get()
         {
-            var movies = core.UnitOfWork.MovieRepository.Query().ToList();
+            var movies = moviesService.UnitOfWork.MovieRepository.Query().ToList();
             var mapper = mapperConfiguration.CreateMapper();
 
             foreach (var m in movies)
@@ -49,7 +50,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
 
         private IEnumerable<MovieDTO> GetMitYield_OhneAutoMapper()
         {
-            var movies = core.UnitOfWork.MovieRepository.Query().ToList();
+            var movies = moviesService.UnitOfWork.MovieRepository.Query().ToList();
 
             foreach (var m in movies)
             {
@@ -65,7 +66,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
 
         private IEnumerable<MovieDTO> GetOhneYield()
         {
-            var movies = core.UnitOfWork.MovieRepository.Query().ToList();
+            var movies = moviesService.UnitOfWork.MovieRepository.Query().ToList();
 
             List<MovieDTO> movieDTOs = new List<MovieDTO>();
             foreach (var m in movies)
@@ -79,7 +80,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
         [HttpGet("{id}")]
         public MovieDTO Get(int id)
         {
-            return mapperConfiguration.CreateMapper().Map<MovieDTO>(core.UnitOfWork.MovieRepository.GetById(id));
+            return mapperConfiguration.CreateMapper().Map<MovieDTO>(moviesService.UnitOfWork.MovieRepository.GetById(id));
         }
 
         // POST api/<MoviesController>
@@ -87,8 +88,8 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
         public void Post([FromBody] MovieDTO value)
         {
             var movie = mapperConfiguration.CreateMapper().Map<Movie>(value);
-            core.UnitOfWork.MovieRepository.Add(movie);
-            core.UnitOfWork.Save();
+            moviesService.UnitOfWork.MovieRepository.Add(movie);
+            moviesService.UnitOfWork.Save();
         }
 
         // PUT api/<MoviesController>/5
@@ -96,16 +97,16 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Controllers
         public void Put(int id, [FromBody] MovieDTO value)
         {
             var movie = mapperConfiguration.CreateMapper().Map<Movie>(value);
-            core.UnitOfWork.MovieRepository.Update(movie);
-            core.UnitOfWork.Save();
+            moviesService.UnitOfWork.MovieRepository.Update(movie);
+            moviesService.UnitOfWork.Save();
         }
 
         // DELETE api/<MoviesController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            core.UnitOfWork.MovieRepository.DeleteById(id);
-            core.UnitOfWork.Save();
+            moviesService.UnitOfWork.MovieRepository.DeleteById(id);
+            moviesService.UnitOfWork.Save();
         }
     }
 }

@@ -42,5 +42,11 @@ namespace ppedv.MovieThemeCollector.Logic.Services
 
             DeleteMovie(movie);
         }
+
+
+        public Movie GetLatestMovie()
+        {
+            return UnitOfWork.GetRepo<Movie>().Query().OrderByDescending(x => x.Published.Date).ThenBy(x => x.Title).FirstOrDefault();
+        }
     }
 }

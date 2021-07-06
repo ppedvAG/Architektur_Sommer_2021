@@ -41,13 +41,15 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
             builder.RegisterAssemblyTypes(dataAss).Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces();
             builder.RegisterAssemblyTypes(dataAss).Where(t => t.Name.EndsWith("UnitOfWork")).AsImplementedInterfaces();
             builder.RegisterAssemblyTypes(demoAss).Where(t => t.Name.EndsWith("BogusDemoDataService")).AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes(deviceAss).Where(t => t.Name.EndsWith("ACMESoundplayer2000")).AsImplementedInterfaces();
+            builder.RegisterType<PeopleService>().AsImplementedInterfaces();
             
             //builder.RegisterType<Data.EFCore.EfUnitOfWork>().As<IUnitOfWork>();
             //builder.RegisterType(typeof(Data.EFCore.EfMovieRepository)).As(typeof(IMovieRepository));
             var container = builder.Build();
             
 
-            var core = new Core(device, container.Resolve<IUnitOfWork>());
+            var moviesService = new MoviesService(container.Resolve<IUnitOfWork>());
             //var core = new Core(device,null);
             //var core = new Core(new Device.ACME.ACMESoundplayer2000(), new Data.EFCore.EfUnitOfWork());
 
@@ -58,10 +60,18 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
                 demoService.CreateDemoDataAndStoreInDatabase();
             }
 
+            var player = new MovieThemePlayerService(container.Resolve<IDevice>());
+            player.PlayerDevice.Play(300, 200);
 
-            core.Device.Play(300, 200);
+            //delete movie und personen
+            var killme = moviesService.UnitOfWork.MovieRepository.Query().OrderByDescending(x => x.Id).FirstOrDefault();
+            if(killme !=null)
+            {
+                moviesService.DeleteMovieWithAllAttachedPersons(killme, container.Resolve<IPeopleService>());
+            }
 
-            var query = core.UnitOfWork.GetRepo<Movie>().Query().Where(x => !string.IsNullOrWhiteSpace(x.Title));
+            
+            var query = moviesService.UnitOfWork.GetRepo<Movie>().Query().Where(x => !string.IsNullOrWhiteSpace(x.Title));
             //Logger.Instance.Info($"Query: {query.ToQueryString()}");
             foreach (var item in query.ToList())
             {
@@ -71,8 +81,8 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
                 Console.WriteLine($"\tDebutants: {string.Join(", ", item.Debutants.Select(x => x.Name))}");
             }
 
-            core.UnitOfWork.GetRepo<Movie>().Add(new Movie() { Title = "" }); //im log sehen wir die überschriebene Add implementierung
-            core.UnitOfWork.MovieRepository.Add(new Movie() { Title = "" }); //im log sehen wir die überschriebene Add implementierung
+            moviesService.UnitOfWork.GetRepo<Movie>().Add(new Movie() { Title = "" }); //im log sehen wir die überschriebene Add implementierung
+            moviesService.UnitOfWork.MovieRepository.Add(new Movie() { Title = "" }); //im log sehen wir die überschriebene Add implementierung
 
             //Stored Proc erstellen
             //CREATE PROCEDURE dbo.GetMoviesOrderdByYear
@@ -80,7 +90,7 @@ namespace ppedv.MovieThemeCollector.UI.DevConsole
             //SELECT* FROM Movies ORDER BY DATEPART(Year, Published)
             try
             {
-                foreach (var item in core.UnitOfWork.MovieRepository.GetMovieFromThatSpecialStroedProc())
+                foreach (var item in moviesService.UnitOfWork.MovieRepository.GetMovieFromThatSpecialStroedProc())
                 {
                     Console.WriteLine($"STORED-PROC: {item.Title}");
                 }
