@@ -2,7 +2,9 @@
 using ppedv.MovieThemeCollector.Common;
 using ppedv.MovieThemeCollector.Contracts;
 using ppedv.MovieThemeCollector.Contracts.Interfaces;
+using ppedv.MovieThemeCollector.Contracts.Interfaces.Services;
 using ppedv.MovieThemeCollector.Logic;
+using ppedv.MovieThemeCollector.Logic.Services;
 using System;
 using System.Linq;
 using System.Reflection;

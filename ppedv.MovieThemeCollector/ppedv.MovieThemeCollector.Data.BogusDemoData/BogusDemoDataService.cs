@@ -1,6 +1,6 @@
 ﻿using Bogus;
 using ppedv.MovieThemeCollector.Contracts;
-using ppedv.MovieThemeCollector.Contracts.Interfaces;
+using ppedv.MovieThemeCollector.Contracts.Interfaces.Services;
 using System.Collections.Generic;
 using Person = ppedv.MovieThemeCollector.Contracts.Person;
 

@@ -6,7 +6,7 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client
 {
     class Program
     {
-        async static Task Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             swaggerClient sc = new swaggerClient("https://localhost:5001", new System.Net.Http.HttpClient());
@@ -17,6 +17,6 @@ namespace ppedv.MovieThemeCollector.UI.ASP_WebAPI.Client
 
             Console.ReadLine();
         }
-            
+
     }
 }

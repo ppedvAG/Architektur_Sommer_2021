@@ -1,9 +1,7 @@
-﻿using ppedv.MovieThemeCollector.Contracts;
-using ppedv.MovieThemeCollector.Contracts.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using ppedv.MovieThemeCollector.Contracts.Interfaces;
+using ppedv.MovieThemeCollector.Contracts.Interfaces.Services;
 
-namespace ppedv.MovieThemeCollector.Logic
+namespace ppedv.MovieThemeCollector.Logic.Services
 {
     public class DemoService 
     {

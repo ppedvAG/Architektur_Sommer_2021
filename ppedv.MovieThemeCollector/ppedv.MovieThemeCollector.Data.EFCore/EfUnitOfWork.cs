@@ -6,7 +6,7 @@ namespace ppedv.MovieThemeCollector.Data.EFCore
 {
     public class EfUnitOfWork : IUnitOfWork
     {
-        EfContext con = new EfContext();
+        readonly EfContext con = new EfContext();
 
         public IMovieRepository MovieRepository => new EfMovieRepository(con);
 

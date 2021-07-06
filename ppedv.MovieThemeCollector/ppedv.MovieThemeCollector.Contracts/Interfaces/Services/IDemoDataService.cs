@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ppedv.MovieThemeCollector.Contracts.Interfaces
+namespace ppedv.MovieThemeCollector.Contracts.Interfaces.Services
 {
     public interface IDemoDataService
     {
